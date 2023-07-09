@@ -1,0 +1,201 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Playfair+Display:ital@0;1&family=Poppins:wght@400;500&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    height: 100vh;
+    width: 100%;
+    background-color: #d38e8e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 30px;
+}
+
+.form{
+    position: absolute;
+    max-width: 430px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 6px;
+    background: #FFF;
+}
+
+.form.signup{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.forms.show-signup .form.signup{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.forms.show-signup .form.login{
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+header{
+    font-size: 30px;
+    font-weight: 500;
+    color: #9f6565;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+.form .field{
+    position: relative;
+    height: 45px;
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 6px;
+}
+
+.field input,
+.field button{
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    border-radius: 6px;
+
+}
+
+.field button{
+    color: #f6f4f4;
+    background-color: #eab5b5;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.field button:hover{
+    background-color: #c8a4a4;
+}
+
+
+/* the borders of the input */
+.field input{
+    border: 1.5px solid #c3baba;
+    padding: 0 15px;
+    outline: none;
+}
+
+.field input:focus{
+    border-bottom-width: 4px;
+}
+
+.form-link{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.form-link span,
+.form-link a{
+    font-size: 15px;
+    color: #70ae9c
+}
+
+.form a{
+    color: #739db8;
+    text-decoration: none;
+}
+
+.form-content a:hover{
+    text-decoration: underline;
+    border-radius: 6px;
+}
+
+.eye-icon{
+    top: 50%;
+    right: 10px;
+    position: absolute;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #c3baba;
+    cursor: pointer;
+    padding: 5px;
+}
+
+/* line before the social media links*/
+.line{
+    position: relative;
+    height: 1px;
+    width: 100%;
+    background-color: #b0acac;
+    margin: 36px 0;
+}
+
+.line::before{
+    content: 'Or';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFF;
+    color: #b0acac;
+    padding: 0 15px;
+}
+
+.media-options a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a.facebook{
+    color: #FFF;
+    background-color: #264f9b;
+    font-weight: 500;
+}
+
+a.facebook .facebook-icon{
+    height:28px;
+    width: 28px;
+    color: #465b8a;
+    background-color: #ffffff;
+    font-size: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.facebook-icon,
+img.google-img {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+}
+
+img.google-img{
+    height: 20px;
+    width: 20px;
+    object-fit: cover;
+}
+
+a.google{
+    border: 1px solid #dad2d2;
+}
+
+a.google span{
+    color: #454141;
+    font-weight: 500;
+    opacity: 0.6;
+}
+
+@media screen and (max-width: 400px) {
+    .form{
+        padding: 15px 10px;
+    }
+}
